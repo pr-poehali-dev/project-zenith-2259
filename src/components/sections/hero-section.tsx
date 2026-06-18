@@ -81,9 +81,16 @@ export function HeroSection() {
           <img
             src="https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/a34c01b4-b90a-4e71-8ea5-9e4a35b8f365.jpg"
             alt="HotSteelGroup"
-            className="w-20 h-20 md:w-28 md:h-28 object-contain rounded-full"
+            className="w-20 h-20 md:w-28 md:h-28 object-cover rounded-none"
           />
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center" style={{ color: "#FFAA6B" }}>
+          <h1
+            className="text-5xl md:text-7xl lg:text-8xl font-serif text-center"
+            style={{
+              color: "#FFAA6B",
+              WebkitTextStroke: "2px black",
+              paintOrder: "stroke fill",
+            }}
+          >
             Гриль-зоны <em className="italic">премиум</em>-класса от HotSteelGroup
           </h1>
         </div>

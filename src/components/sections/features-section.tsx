@@ -106,7 +106,7 @@ export function FeaturesSection() {
             </div>
             <div className="mt-4">
               <h3 className="font-serif text-xl text-foreground">Премиум-материалы</h3>
-              <p className="text-muted-foreground text-sm mt-1">Нержавеющая сталь, натуральный камень и массив дерева.</p>
+              <p className="text-muted-foreground text-sm mt-1">Жаропрочная сталь 6 мм, столешни и дверки — керамогранит или натуральная древесина: лиственница, липа, дуб.</p>
             </div>
           </motion.div>
 

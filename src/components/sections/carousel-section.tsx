@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 
 const portfolioItems = [
-  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/62895502-a4ef-4406-ad8f-c3284a669c9b.jpg",
-  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/d1adc71a-eb47-45e0-9c00-1c6a253cbd7b.jpg",
-  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/537a66d8-6e98-4aa9-a7af-c88f5258fce9.jpg",
-  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/d28160e6-34cb-4744-af52-4a585a061450.jpg",
-  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/7b7cc5e7-006e-44d6-b10e-177d84df96a5.jpg",
+  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/b3f488ae-172a-4607-8bbf-d77344dfbde1.jpg",
+  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/493aff73-347e-46a4-b079-ff0926d9bdba.jpg",
+  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/27883e5f-afd8-4a07-a726-199a24e2c651.jpg",
+  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/b6058cac-edb1-4bbb-b935-0a320eeef088.jpg",
+  "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/11e6b9ba-309a-40db-b8ca-9a0e97706712.jpg",
   "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/25b3df2a-55c7-413d-8a56-bbe3f5fb8dc2.jpg",
 ]
 

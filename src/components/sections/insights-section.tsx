@@ -7,22 +7,22 @@ const articles = [
   {
     title: "Как выбрать гриль для своего двора",
     category: "Гид",
-    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/c1d50f7d-3b74-4c0f-81fe-993b9d934886.jpg",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/a24b30bb-703d-402b-a2c6-b4fc071e0a97.jpg",
   },
   {
     title: "Камень или сталь: из чего строим гриль-зону",
     category: "Материалы",
-    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/9492c4fd-5b23-4734-8357-2e77ac8635e5.jpg",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/cc324f0e-2567-44f9-bb15-9cae4d0027c7.jpg",
   },
   {
     title: "5 идей для зоны барбекю на участке",
     category: "Вдохновение",
-    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/b881328f-4f41-4ecf-8558-c7ae26d76d4a.jpg",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/4c6ff495-affd-4b84-a280-aecd40241fb9.jpg",
   },
   {
     title: "Уход за грилем: чтобы служил годами",
     category: "Советы",
-    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/0e2df710-573d-45d9-be71-bc8d9d30e8a7.jpg",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/5107913f-fd2b-4238-a148-f3fdabad3a7e.jpg",
   },
 ]
 

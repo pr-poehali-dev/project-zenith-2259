@@ -89,7 +89,7 @@ export function FeaturesSection() {
           Возможности
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Typography Card */}
           <motion.div
             className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
@@ -127,6 +127,28 @@ export function FeaturesSection() {
             <div className="mt-4">
               <h3 className="font-serif text-xl text-foreground">Индивидуальный проект</h3>
               <p className="text-muted-foreground text-sm mt-1">Индивидуальный проект под Ваш участок, а также готовые решения для террасы и беседки.</p>
+            </div>
+          </motion.div>
+
+          {/* Price Card */}
+          <motion.div
+            className="bg-primary rounded-xl p-8 min-h-[280px] flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            whileHover={{ scale: 0.98 }}
+            whileTap={{ scale: 0.96 }}
+            data-clickable
+          >
+            <div className="flex-1 flex flex-col items-center justify-center gap-2">
+              <span className="text-sm text-primary-foreground/70 uppercase tracking-widest">Стоимость</span>
+              <span className="text-4xl md:text-5xl font-serif font-medium text-primary-foreground">от 80 000 ₽</span>
+              <span className="text-primary-foreground/70 text-sm">за погонный метр</span>
+            </div>
+            <div className="mt-4">
+              <h3 className="font-serif text-xl text-primary-foreground">Цена</h3>
+              <p className="text-primary-foreground/70 text-sm mt-1">Стоимость зависит от комплектации и материалов отделки.</p>
             </div>
           </motion.div>
 

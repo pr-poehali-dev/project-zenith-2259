@@ -125,8 +125,8 @@ export function FeaturesSection() {
               <LayoutAnimation />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Под ваш участок</h3>
-              <p className="text-muted-foreground text-sm mt-1">Индивидуальный проект под планировку и стиль вашего двора.</p>
+              <h3 className="font-serif text-xl text-foreground">Стандарт и индивидуал</h3>
+              <p className="text-muted-foreground text-sm mt-1">Стандартные варианты, а также индивидуальный размер, комплектация и характеристики.</p>
             </div>
           </motion.div>
 

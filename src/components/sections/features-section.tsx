@@ -62,8 +62,8 @@ function SpeedIndicator() {
 
   return (
     <div className="flex flex-col items-center justify-center h-full gap-4">
-      <span className="text-3xl md:text-4xl font-sans font-medium text-foreground">7 лет</span>
-      <span className="text-sm text-muted-foreground">Гарантия на материалы</span>
+      <span className="text-2xl md:text-3xl font-sans font-medium text-foreground text-center">🚚 Доставка</span>
+      <span className="text-sm text-muted-foreground text-center">по всей России и СНГ</span>
       <div className="w-full max-w-[120px] h-1.5 bg-foreground/10 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-primary rounded-full"
@@ -125,8 +125,8 @@ export function FeaturesSection() {
               <LayoutAnimation />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Стандарт и индивидуал</h3>
-              <p className="text-muted-foreground text-sm mt-1">Стандартные варианты, а также индивидуальный размер, комплектация и характеристики.</p>
+              <h3 className="font-serif text-xl text-foreground">Индивидуальный проект</h3>
+              <p className="text-muted-foreground text-sm mt-1">Индивидуальный проект под Ваш участок, а также готовые решения для террасы и беседки.</p>
             </div>
           </motion.div>
 
@@ -145,8 +145,8 @@ export function FeaturesSection() {
               <SpeedIndicator />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Долговечность</h3>
-              <p className="text-muted-foreground text-sm mt-1">Конструкции, рассчитанные на годы под открытым небом.</p>
+              <h3 className="font-serif text-xl text-foreground">Адресная доставка</h3>
+              <p className="text-muted-foreground text-sm mt-1">Адресная доставка по всей России и СНГ.</p>
             </div>
           </motion.div>
         </div>

@@ -14,11 +14,11 @@ function TypeTester() {
   return (
     <div className="flex items-center justify-center h-full">
       <motion.span
-        className="font-serif text-6xl md:text-8xl text-foreground"
+        className="font-serif text-5xl md:text-7xl text-foreground"
         animate={{ scale }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
-        Aa
+        🔥
       </motion.span>
     </div>
   )
@@ -62,8 +62,8 @@ function SpeedIndicator() {
 
   return (
     <div className="flex flex-col items-center justify-center h-full gap-4">
-      <span className="text-3xl md:text-4xl font-sans font-medium text-foreground">100ms</span>
-      <span className="text-sm text-muted-foreground">Загрузка</span>
+      <span className="text-3xl md:text-4xl font-sans font-medium text-foreground">7 лет</span>
+      <span className="text-sm text-muted-foreground">Гарантия на материалы</span>
       <div className="w-full max-w-[120px] h-1.5 bg-foreground/10 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-primary rounded-full"
@@ -105,8 +105,8 @@ export function FeaturesSection() {
               <TypeTester />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Типографика</h3>
-              <p className="text-muted-foreground text-sm mt-1">Красивые шрифты, которые идеально масштабируются.</p>
+              <h3 className="font-serif text-xl text-foreground">Премиум-материалы</h3>
+              <p className="text-muted-foreground text-sm mt-1">Нержавеющая сталь, натуральный камень и массив дерева.</p>
             </div>
           </motion.div>
 
@@ -125,8 +125,8 @@ export function FeaturesSection() {
               <LayoutAnimation />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Макеты</h3>
-              <p className="text-muted-foreground text-sm mt-1">Гибкие сетки, которые адаптируются под контент.</p>
+              <h3 className="font-serif text-xl text-foreground">Под ваш участок</h3>
+              <p className="text-muted-foreground text-sm mt-1">Индивидуальный проект под планировку и стиль вашего двора.</p>
             </div>
           </motion.div>
 
@@ -145,8 +145,8 @@ export function FeaturesSection() {
               <SpeedIndicator />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Скорость</h3>
-              <p className="text-muted-foreground text-sm mt-1">Молниеносная загрузка страниц для ваших гостей.</p>
+              <h3 className="font-serif text-xl text-foreground">Долговечность</h3>
+              <p className="text-muted-foreground text-sm mt-1">Конструкции, рассчитанные на годы под открытым небом.</p>
             </div>
           </motion.div>
         </div>

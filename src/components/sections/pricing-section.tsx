@@ -3,18 +3,24 @@ import { Check } from "lucide-react"
 
 const plans = [
   {
-    name: "Старт",
-    price: "1 200",
-    period: " руб/мес",
-    description: "Для личного портфолио",
-    features: ["5 страниц", "Свой домен", "Базовая аналитика", "Поддержка по email"],
+    name: "Классика",
+    price: "от 290 000",
+    period: " ₽",
+    description: "Компактная гриль-зона под ключ",
+    features: ["Встроенный гриль из нержавейки", "Столешница из камня", "Зона хранения", "Монтаж за 14 дней"],
   },
   {
-    name: "Про",
-    price: "2 900",
-    period: " руб/мес",
-    description: "Для растущих авторов",
-    features: ["Безлимит страниц", "Приоритет поддержки", "Расширенная аналитика", "Свой брендинг", "Работа в команде"],
+    name: "Премиум",
+    price: "от 690 000",
+    period: " ₽",
+    description: "Полноценный outdoor-комплекс",
+    features: [
+      "Гриль, коптильня и мангал",
+      "Зона мойки и барная стойка",
+      "Навес и ландшафтное освещение",
+      "Индивидуальный дизайн-проект",
+      "Гарантия 7 лет",
+    ],
     popular: true,
   },
 ]
@@ -29,8 +35,8 @@ export function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-serif text-foreground">Простые и понятные цены</h2>
-          <p className="text-muted-foreground mt-4 max-w-md mx-auto">Начните бесплатно, платите когда готовы.</p>
+          <h2 className="text-3xl md:text-5xl font-serif text-foreground">Стоимость гриль-зон</h2>
+          <p className="text-muted-foreground mt-4 max-w-md mx-auto">Точная цена — после бесплатного замера и проекта.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -75,7 +81,7 @@ export function PricingSection() {
                     : "bg-secondary text-foreground hover:bg-accent/30"
                 }`}
               >
-                Начать
+                Заказать замер
               </button>
             </motion.div>
           ))}

@@ -5,24 +5,24 @@ import { ArrowRight } from "lucide-react"
 
 const articles = [
   {
-    title: "Искусство визуального сторителлинга",
-    category: "Дизайн",
-    image: "/visual-storytelling-design-article.jpg",
+    title: "Как выбрать гриль для своего двора",
+    category: "Гид",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/c23399bd-3478-463b-90c2-05fe25fb5254.jpg",
   },
   {
-    title: "Как создать личный бренд онлайн",
-    category: "Стратегия",
-    image: "/personal-branding-digital-marketing.jpg",
+    title: "Камень или сталь: из чего строим гриль-зону",
+    category: "Материалы",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/3bba444a-7300-46e5-8f9d-73c4b3e9758f.jpg",
   },
   {
-    title: "Тренды типографики 2025",
-    category: "Типографика",
-    image: "/typography-trends-modern-fonts.jpg",
-  },
-  {
-    title: "Минимализм в дизайне портфолио",
+    title: "5 идей для зоны барбекю на участке",
     category: "Вдохновение",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/e708978e-330c-4059-8f96-d013ddbd44c5.jpg",
+  },
+  {
+    title: "Уход за грилем: чтобы служил годами",
+    category: "Советы",
+    image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/files/10afd3c2-522d-4971-9b7e-c15c4ca87e92.jpg",
   },
 ]
 

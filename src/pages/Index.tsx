@@ -18,8 +18,8 @@ const Index = () => {
             <img
               src="https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/305313b3-fb41-493b-b5a3-9ff4e009e425.jpg"
               alt="HotSteelGroup"
-              className="w-28 h-28 md:w-36 md:h-36 object-cover flex-shrink-0"
-              style={{ boxShadow: "0 0 0 1px rgba(255,170,107,0.25)" }}
+              className="w-28 h-28 md:w-36 md:h-36 object-contain flex-shrink-0"
+              style={{ mixBlendMode: "lighten" }}
             />
             <div className="flex flex-col gap-1 text-center md:text-left">
               <span className="text-xs tracking-[0.3em] uppercase" style={{ color: "rgba(255,170,107,0.5)" }}>HotSteelGroup</span>

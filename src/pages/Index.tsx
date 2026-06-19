@@ -16,7 +16,7 @@ const Index = () => {
         <header className="w-full" style={{ backgroundColor: "#111110", borderBottom: "1px solid rgba(255,170,107,0.2)" }}>
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 md:py-8 flex flex-col md:flex-row items-center gap-5 md:gap-10">
             <img
-              src="https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/a34c01b4-b90a-4e71-8ea5-9e4a35b8f365.jpg"
+              src="https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/305313b3-fb41-493b-b5a3-9ff4e009e425.jpg"
               alt="HotSteelGroup"
               className="w-28 h-28 md:w-36 md:h-36 object-cover flex-shrink-0"
               style={{ boxShadow: "0 0 0 1px rgba(255,170,107,0.25)" }}

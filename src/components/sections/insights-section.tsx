@@ -5,23 +5,23 @@ import { ArrowRight } from "lucide-react"
 
 const articles = [
   {
-    title: "Как выбрать гриль для своего двора",
-    category: "Гид",
+    title: "Сочный стейк на угольном гриле: пошаговый рецепт",
+    category: "Рецепт",
     image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/a24b30bb-703d-402b-a2c6-b4fc071e0a97.jpg",
   },
   {
-    title: "Камень или сталь: из чего строим гриль-зону",
-    category: "Материалы",
+    title: "Плов на живом огне: секреты приготовления в казане",
+    category: "Рецепт",
     image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/cc324f0e-2567-44f9-bb15-9cae4d0027c7.jpg",
   },
   {
-    title: "5 идей для зоны барбекю на участке",
-    category: "Вдохновение",
+    title: "Копчёная рыба на угле: температура, время и маринад",
+    category: "Рецепт",
     image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/4c6ff495-affd-4b84-a280-aecd40241fb9.jpg",
   },
   {
-    title: "Уход за грилем: чтобы служил годами",
-    category: "Советы",
+    title: "Рёбрышки BBQ на углях: как добиться карамельной корочки",
+    category: "Рецепт",
     image: "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/5107913f-fd2b-4238-a148-f3fdabad3a7e.jpg",
   },
 ]

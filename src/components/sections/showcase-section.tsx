@@ -1,5 +1,7 @@
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import type React from "react"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { X, ChevronLeft, ChevronRight } from "lucide-react"
 
 const showcaseImages = [
   "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/4c6ff495-affd-4b84-a280-aecd40241fb9.jpg",
@@ -22,29 +24,24 @@ const showcaseImages = [
   "https://cdn.poehali.dev/projects/0f38cad7-41f9-4580-b888-74ae2b70090e/bucket/c8f49c9c-0026-4167-ad1f-ead5e773c871.jpg",
 ]
 
-const yOffsets = [100, 150, 80, 120, 90, 140, 100, 160, 70]
+const previewImages = showcaseImages.slice(0, 4)
 
 export function ShowcaseSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  })
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
-  const y0 = useTransform(scrollYProgress, [0, 1], [yOffsets[0], -yOffsets[0]])
-  const y1 = useTransform(scrollYProgress, [0, 1], [yOffsets[1], -yOffsets[1]])
-  const y2 = useTransform(scrollYProgress, [0, 1], [yOffsets[2], -yOffsets[2]])
-  const y3 = useTransform(scrollYProgress, [0, 1], [yOffsets[3], -yOffsets[3]])
-  const y4 = useTransform(scrollYProgress, [0, 1], [yOffsets[4], -yOffsets[4]])
-  const y5 = useTransform(scrollYProgress, [0, 1], [yOffsets[5], -yOffsets[5]])
-  const y6 = useTransform(scrollYProgress, [0, 1], [yOffsets[6], -yOffsets[6]])
-  const y7 = useTransform(scrollYProgress, [0, 1], [yOffsets[7], -yOffsets[7]])
-  const y8 = useTransform(scrollYProgress, [0, 1], [yOffsets[8], -yOffsets[8]])
+  const openLightbox = (index: number) => setLightboxIndex(index)
+  const closeLightbox = () => setLightboxIndex(null)
+  const prev = () => setLightboxIndex((i) => (i === null ? 0 : (i - 1 + showcaseImages.length) % showcaseImages.length))
+  const next = () => setLightboxIndex((i) => (i === null ? 0 : (i + 1) % showcaseImages.length))
 
-  const yValues = [y0, y1, y2, y3, y4, y5, y6, y7, y8, y0, y1, y2, y3, y4, y5, y6, y7, y8]
+  const handleKey = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") prev()
+    if (e.key === "ArrowRight") next()
+    if (e.key === "Escape") closeLightbox()
+  }
 
   return (
-    <section ref={containerRef} className="bg-background px-6 py-32 overflow-hidden">
+    <section className="bg-background px-6 py-32">
       <div className="max-w-7xl mx-auto">
         <motion.p
           className="text-muted-foreground text-sm uppercase tracking-widest mb-12"
@@ -55,33 +52,103 @@ export function ShowcaseSection() {
           Галерея
         </motion.p>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-6 space-y-4 md:space-y-6">
-          {showcaseImages.map((src, i) => (
-            <motion.div
+        {/* 2x2 grid preview */}
+        <div className="grid grid-cols-2 gap-3 md:gap-4 max-w-2xl">
+          {previewImages.map((src, i) => (
+            <motion.button
               key={i}
-              className="relative break-inside-avoid rounded-lg overflow-hidden group"
-              style={{ y: yValues[i % yValues.length] }}
-              initial={{ opacity: 0, y: 30 }}
+              onClick={() => openLightbox(i)}
+              className="relative rounded-lg overflow-hidden aspect-square group"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.8,
-                delay: (i % 3) * 0.1,
-                ease: [0.16, 1, 0.3, 1],
-              }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               data-clickable
             >
-              <motion.img
+              <img
                 src={src}
                 alt={`Проект ${i + 1}`}
-                className="w-full h-auto object-cover block"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-            </motion.div>
+              {/* На последней ячейке показываем счётчик */}
+              {i === 3 && (
+                <div className="absolute inset-0 flex items-center justify-center"
+                  style={{ background: "rgba(0,0,0,0.55)" }}>
+                  <span className="font-serif text-2xl text-white">+{showcaseImages.length - 3}</span>
+                </div>
+              )}
+            </motion.button>
           ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <>
+            <motion.div
+              className="fixed inset-0 z-40 bg-black/90 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeLightbox}
+            />
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onKeyDown={handleKey}
+              tabIndex={0}
+            >
+              {/* Close */}
+              <button
+                onClick={closeLightbox}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center z-10 transition-colors hover:bg-white/10"
+                data-clickable
+              >
+                <X className="w-5 h-5 text-white" />
+              </button>
+
+              {/* Counter */}
+              <span className="absolute top-5 left-1/2 -translate-x-1/2 text-sm text-white/50">
+                {lightboxIndex + 1} / {showcaseImages.length}
+              </span>
+
+              {/* Prev */}
+              <button
+                onClick={(e) => { e.stopPropagation(); prev() }}
+                className="absolute left-4 w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:bg-white/10"
+                data-clickable
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+
+              {/* Image */}
+              <motion.img
+                key={lightboxIndex}
+                src={showcaseImages[lightboxIndex]}
+                alt={`Проект ${lightboxIndex + 1}`}
+                className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.25 }}
+                onClick={(e) => e.stopPropagation()}
+              />
+
+              {/* Next */}
+              <button
+                onClick={(e) => { e.stopPropagation(); next() }}
+                className="absolute right-4 w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:bg-white/10"
+                data-clickable
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
